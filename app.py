@@ -14,7 +14,7 @@ st.write("Ask me legal questions, and I'll provide answers!")
 st.write("Created by: Vidhan Mehta, Sumith Sigtia, Shabiul Hasnain Siddiqui, Swathi")
 
 # Define the path to your PDF file
-pdf_path = "https://drive.google.com/file/d/1ljc2JLXO4u2GZ-52w7rCoZbXKQeTnfxW/view?usp=sharing"
+pdf_path = "https://github.com/Sumithsigtia/LawAssist/blob/main/law_assist.pdf"
 
 # Load PDF and split by pages
 loader = PyPDFLoader(pdf_path)
