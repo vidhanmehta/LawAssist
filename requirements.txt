@@ -11,3 +11,5 @@ streamlit
 streamlit-extras
 PyPDF2==3.0.1
 python-dotenv==1.0.0
+s3fs
+git+https://github.com/streamlit/files-connection
