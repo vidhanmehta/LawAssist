@@ -15,7 +15,7 @@ st.write("Ask me legal questions, and I'll provide answers!")
 st.write("Created by: Vidhan Mehta, Sumith Sigtia, Shabiul Hasnain Siddiqui, Swathi")
 
 # Define the path to your PDF file
-pdf_path = "s3://streamlitbucketlaw/law_assist.pdf"
+pdf_path = "law_assist.pdf"
 
 # Load PDF and split by pages
 loader = PyPDFLoader(pdf_path)
