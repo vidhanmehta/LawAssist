@@ -25,7 +25,7 @@ pages = loader.load_and_split()
 chunks = pages
 
 # Create embeddings model
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "${{ secrets.SECRET_TOKEN }}"
 embeddings = OpenAIEmbeddings()
 
 # Create vector database
