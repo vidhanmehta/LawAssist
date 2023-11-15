@@ -10,6 +10,9 @@ from langchain.llms import OpenAI
 from langchain.chains import ConversationalRetrievalChain
 from st_files_connection import FilesConnection
 
+# Set OpenAI API key as an environment variable
+os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+
 st.title("Law Assist")
 st.write("Ask me legal questions, and I'll provide answers!")
 st.write("Created by: Vidhan Mehta, Sumith Sigtia, Shabiul Hasnain Siddiqui, Swathi")
@@ -24,9 +27,9 @@ pages = loader.load_and_split()
 # Convert pages to chunks
 chunks = pages
 
-# Create embeddings model
+# Create embeddings model with OpenAI API key
 openai_api_key = os.getenv("OPENAI_API_KEY")
-embeddings = OpenAIEmbeddings()
+embeddings = OpenAIEmbeddings(api_key=openai_api_key)
 
 # Create vector database
 db = FAISS.from_documents(chunks, embeddings)
