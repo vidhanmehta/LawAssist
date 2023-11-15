@@ -1,11 +1,11 @@
-langchain==0.0.150
+langchain==0.0.316
+openai==0.28.1
 pypdf
 pandas
 matplotlib
 tiktoken
 textract
 transformers
-openai
 faiss-cpu
 streamlit
 streamlit-extras
