@@ -10,8 +10,11 @@ from langchain.llms import OpenAI
 from langchain.chains import ConversationalRetrievalChain
 from st_files_connection import FilesConnection
 
+# Retrieve OpenAI API key from GitHub Secrets
+openai_api_key = st.secrets["OPENAI_API_KEY"]
+
 # Set OpenAI API key as an environment variable
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+os.environ["OPENAI_API_KEY"] = openai_api_key
 
 st.title("Law Assist")
 st.write("Ask me legal questions, and I'll provide answers!")
@@ -28,7 +31,6 @@ pages = loader.load_and_split()
 chunks = pages
 
 # Create embeddings model with OpenAI API key
-openai_api_key = os.getenv("OPENAI_API_KEY")
 embeddings = OpenAIEmbeddings(api_key=openai_api_key)
 
 # Create vector database
